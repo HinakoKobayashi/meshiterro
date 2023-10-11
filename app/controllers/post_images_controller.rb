@@ -17,6 +17,7 @@ class PostImagesController < ApplicationController
 
   def show
     @post_image = PostImage.find(params[:id])
+    @post_image.user_id = current_user.id
   end
 
   def destroy
